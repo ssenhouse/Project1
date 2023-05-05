@@ -7,8 +7,6 @@
 
 def client_risk_tolerance_info():
     
-    choices = [1,2,3,4]
-    
     close_friend = input("A. On a scale of 1(Risky Avoidant) - 4(Risky), how would your closest friend describe your risk tolerance?")
     close_friend =int(close_friend)
     
@@ -49,17 +47,4 @@ def client_risk_tolerance():
         return risk_sum / 20
     else:
         return print("Your answers are not applicable, please input a value between 1-4 for each question")
-
-
-#module to ask desiredtimeframe to invest"
-
-
-''' from fileio.clientriskprofile import investment_timeframe'''
-
-investment_timeframe = input("What is the desired timeframe(in # of years) for your investment?")
-investment_timeframe = float(investment_timeframe)
-
-#to doublecheck that the variable returns as a float#
-
-type(investment_timeframe)
 
