@@ -30,9 +30,9 @@ def client_risk_tolerance_info():
     willingness = input("E. How comfortable on a scale of 1(Not Comfortable) - 4(Very Comfortable)"
         "are you with investing your money into stocks?")
     willingness = int(willingness)
-        
+    
     return close_friend, self_eval, would_you_rather, risk_define, willingness
-        
+
 # aggregate data for tolerance level #
 
 def aggregate_client_score():
@@ -45,6 +45,6 @@ def client_risk_tolerance():
     risk_sum = aggregate_client_score()
     if isinstance(risk_sum, int) and 1 <= risk_sum <= 20:
         return risk_sum / 20
+    print(f'Your risk profile is:{risk_sum}')
     else:
         return print("Your answers are not applicable, please input a value between 1-4 for each question")
-
