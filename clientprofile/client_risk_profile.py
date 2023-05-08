@@ -44,7 +44,9 @@ def aggregate_client_score():
 def client_risk_tolerance():
     risk_sum = aggregate_client_score()
     if isinstance(risk_sum, int) and 1 <= risk_sum <= 20:
-        return risk_sum / 20
-    print(f'Your risk profile is:{risk_sum}')
+        risk_factor = risk_sum/20
+        return (f'Your risk profile is {risk_factor}')
     else:
-        return print("Your answers are not applicable, please input a value between 1-4 for each question")
+        risk_factor = risk_sum/20
+        return print(f'Your answers are not applicable, please input a value between 1-4 for each question {risk_factor}')  
+    
