@@ -5,29 +5,38 @@
 
 #collect client data for scoring#
 
+def verifier(text):
+    while True:
+        variable = input(text) 
+        if variable == "1" or variable == "2" or variable == "3" or variable == "4":
+            return variable
+            break
+        else:
+            print("Please enter a valid input")
+
 def client_risk_tolerance_info():   
     
-    close_friend = input("A. On a scale of 1(Risky Avoidant) - 4(Risky), how would your closest friend describe your risk tolerance?")
+    close_friend = verifier("A. On a scale of 1(Risky Avoidant) - 4(Risky), how would your closest friend describe your risk tolerance?")
     close_friend =float(close_friend)
     
-    self_eval = input("B. On a scale of 1(Risky Avoidant) - 4(Risky), how would you describe your risk tolerance?")        
+    self_eval = verifier("B. On a scale of 1(Risky Avoidant) - 4(Risky), how would you describe your risk tolerance?")        
     self_eval = float(self_eval)
     
-    would_you_rather = input("C. What would you rather:" 
+    would_you_rather = verifier("C. What would you rather:" 
     "1. Take $1,000 in cash  "
     "2. A 50% chance at winning $5,000  "
     "3. A 25% chance at winning $10,000  "
      "4. A 5% chance at winning $100,000  ")
     would_you_rather = float(would_you_rather)
     
-    risk_define = input(
+    risk_define = verifier(
     "D. Define risk: 1. Loss "
         "2. Uncertainty "
         "3. Opportunity "
         "4. Thrill ")
     risk_define = float(risk_define)
     
-    willingness = input("E. How comfortable on a scale of 1(Not Comfortable) - 4(Very Comfortable)"
+    willingness = verifier("E. How comfortable on a scale of 1(Not Comfortable) - 4(Very Comfortable)"
         "are you with investing your money into stocks?")
     willingness = float(willingness)
         
