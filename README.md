@@ -57,6 +57,26 @@ Critical to us completing this project were the following websites. We recommend
 # Results
 To illustrate the results of our model, we ran scenerios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do our results in our porfolio change. 
 
+## Risk Avoidant Client
+Based on our questionaire, the risk avoidant client would have entered all '1' for the question. As a result the model returned a porfolio that has low returns and low risk. 
+
+## Figure 1
+
+![Risk avoidant optimal porfolio](/images/risk_avoidant_portfolio.png)
+
+## Figure 2
+
+![Risk avoidant optimal portfolio efficient frontier](/images/risk_avoidant_portfolio_efficient_frontier.png)
+
+## Risky Client
+Based on our questionaire, the risk avoidant client would have entered all '4' for the question. As a result the model returned a porfolio that has high returns and high risk. 
+
+## Figure 3
+![Risk avoidant optimal porfolio](/images/images/risky_portfolio.png)
+
+
+## Figure 4
+![Risk avoidant optimal portfolio efficient frontier](/images/risk_avoidant_portfolio_efficient_frontier.png.png)
 # Next Steps
 One of the exciting outcomes of this project is that there is long list of options for further analysis and customization of the report. The following is not an exhaustive list, but will provide ideas on what other steps can be taken with this project.
 
