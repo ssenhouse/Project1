@@ -72,15 +72,16 @@ Based on our questionaire, the risk avoidant client would have entered all '1' f
 Based on our questionaire, the risk avoidant client would have entered all '4' for the question. As a result the model returned a porfolio that has high returns and high risk. 
 
 ## Figure 3
-![Risk avoidant optimal porfolio](/images/images/risky_portfolio.png)
+![Risky optimal porfolio](/images/risky_portfolio.png)
 
 
 ## Figure 4
-![Risk avoidant optimal portfolio efficient frontier](/images/risk_avoidant_portfolio_efficient_frontier.png.png)
+![Risky optimal portfolio efficient frontier](/images/risky_portfolio_efficient_frontier.png)
+
 # Next Steps
 One of the exciting outcomes of this project is that there is long list of options for further analysis and customization of the report. The following is not an exhaustive list, but will provide ideas on what other steps can be taken with this project.
 
 **Additional questions that surfaced.**
-* Universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising of a mixed bag of instruments to include stocks, bonds and etf’s. We did this to ensure not just a variety of companies but asset classes as well. 
-* How to best define risk? Specifically, how can we develop a more in depth analysis for creating the investor profile. As we started to use the model to solve for the optimal porfolio, we observed that the model follow a logarithmic estimation for the weights of the optimal portfolio. Therefore, we found it necessary to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Therefore, both the asset classes and the risk tolerance variable are critical inputs
+* Evaluate how to build the universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising of a mixed bag of instruments to include stocks, bonds and etf’s. We did this to ensure not just a variety of companies but asset classes as well. 
+* How to best define risk? Specifically, how can we develop a more in depth analysis for creating the investor profile. As we started to use the model to solve for the optimal porfolio, we observed that the model follow a logarithmic estimation for the weights of the optimal portfolio. Therefore, we found it necessary to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Developing a better understanding of this relationship will allow us to better quantify the risk tolerance, thus allowing us to create a greater spread of risk tolerances and portfolios. 
  
