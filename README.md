@@ -54,3 +54,13 @@ Critical to us completing this project were the following websites. We recommend
 * understand how to construct a risk tolerance variable to quantify an investor's appetite for investment risk[https://finmasters.com/risk-profile-test/#gref]
 * source market data on investment assets from yahoo finance allowing us to quickly create a universe to choose assets[https://github.com/ranaroussi/yfinance]
 
+# Results
+To illustrate the results of our model, we ran scenerios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do our results in our porfolio change. 
+
+# Next Steps
+One of the exciting outcomes of this project is that there is long list of options for further analysis and customization of the report. The following is not an exhaustive list, but will provide ideas on what other steps can be taken with this project.
+
+**Additional questions that surfaced.**
+* Universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising of a mixed bag of instruments to include stocks, bonds and etf’s. We did this to ensure not just a variety of companies but asset classes as well. 
+* How to best define risk? Specifically, how can we develop a more in depth analysis for creating the investor profile. As we started to use the model to solve for the optimal porfolio, we observed that the model follow a logarithmic estimation for the weights of the optimal portfolio. Therefore, we found it necessary to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Therefore, both the asset classes and the risk tolerance variable are critical inputs
+ 
