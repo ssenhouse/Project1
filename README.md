@@ -49,16 +49,16 @@ jupyter lab
 
 # Resources
 
-Critical to us completing this project were the following websites. We recommend that you leverage these resources. They helped us:
-* understand risk parity portfolio theory, and the options within the riskfolio library[https://riskfolio-lib.readthedocs.io/en/latest/index.html]
+Critical to our completing this project were the following websites. We would recommend that you use these resources. They helped us:
+* understand risk parity portfolio theory and the options within the riskfolio library[https://riskfolio-lib.readthedocs.io/en/latest/index.html]
 * understand how to construct a risk tolerance variable to quantify an investor's appetite for investment risk[https://finmasters.com/risk-profile-test/#gref]
-* source market data on investment assets from yahoo finance allowing us to quickly create a universe to choose assets[https://github.com/ranaroussi/yfinance]
+* source market data on investment assets from yahoo finance, allowing us to create a universe to choose assets quickly [https://github.com/ranaroussi/yfinance]
 
 # Results
-To illustrate the results of our model, we ran scenerios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do our results in our porfolio change when the client risk tolerance is changed. 
+To illustrate the results of our model, we ran scenarios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do the results in our portfolio change when the client's risk tolerance is changed?
 
 ## Risk Avoidant Client
-Based on our questionaire, the risk avoidant client would have entered all '1' for the question. As a result the model returned a porfolio that has low returns and low risk. 
+Based on our questionnaire, the risk-avoidant client would have entered all '1' for the answers to the questions. As a result, the model returned a portfolio with low returns and low risk.
 
 ## Figure 1
 
@@ -69,7 +69,7 @@ Based on our questionaire, the risk avoidant client would have entered all '1' f
 ![Risk avoidant optimal portfolio efficient frontier](/images/risk_avoidant_portfolio_efficient_frontier.png)
 
 ## Risky Client
-Based on our questionaire, the risk avoidant client would have entered all '4' for the question. As a result the model returned a porfolio that has high returns and high risk. 
+Based on our questionnaire, the risky client would have entered all '4' for answers. As a result, the model returned a portfolio that had high returns and high risk. 
 
 ## Figure 3
 ![Risky optimal porfolio](/images/risky_portfolio.png)
