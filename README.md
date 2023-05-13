@@ -13,7 +13,7 @@
 # Motivation
 ![Custom image using marvel spiderman to illustrate different tech stocks](/images/spiderman_tech_stocks_image.png)
 
-For project 1, our team "Fab Five Advisors", decided to create a portfolio investment tool based on some of our in-class projects. However, our professor challenged us to dig deeper and leverage risk parity portfolio theory to create our tool. With that in mind, we created a tool that takes a client's risk tolerance and asset choices to create a portfolio. The tool also uses a Monte Carlo simulation to forecast the future returns of the portfolio. Finally, we created summary statitics, and charts to communicate and report our results
+For project 1, our team, "Fab Five Advisors," created a portfolio investment tool based on some of our in-class assignments. However, our professor challenged us to dig deeper and leverage risk parity portfolio theory to develop our tool. With that in mind, we created a tool that takes a client's risk tolerance and asset choices to create a portfolio. The program also uses a Monte Carlo simulation to forecast the future returns of the portfolio. Finally, we created summary statistics and charts to communicate and report our results
 
 # Technologies
 
@@ -55,7 +55,7 @@ Critical to us completing this project were the following websites. We recommend
 * source market data on investment assets from yahoo finance allowing us to quickly create a universe to choose assets[https://github.com/ranaroussi/yfinance]
 
 # Results
-To illustrate the results of our model, we ran scenerios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do our results in our porfolio change. 
+To illustrate the results of our model, we ran scenerios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do our results in our porfolio change when the client risk tolerance is changed. 
 
 ## Risk Avoidant Client
 Based on our questionaire, the risk avoidant client would have entered all '1' for the question. As a result the model returned a porfolio that has low returns and low risk. 
@@ -79,9 +79,9 @@ Based on our questionaire, the risk avoidant client would have entered all '4' f
 ![Risky optimal portfolio efficient frontier](/images/risky_portfolio_efficient_frontier.png)
 
 # Next Steps
-One of the exciting outcomes of this project is that there is long list of options for further analysis and customization of the report. The following is not an exhaustive list, but will provide ideas on what other steps can be taken with this project.
+One of the exciting outcomes of this project is that there is a long list of options for further analysis and customization of the report. The following is not an exhaustive list but will provide ideas on what other steps can be taken with this project.
 
-**Additional questions that surfaced.**
-* Evaluate how to build the universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising of a mixed bag of instruments to include stocks, bonds and etf’s. We did this to ensure not just a variety of companies but asset classes as well. 
-* How to best define risk? Specifically, how can we develop a more in depth analysis for creating the investor profile. As we started to use the model to solve for the optimal porfolio, we observed that the model follow a logarithmic estimation for the weights of the optimal portfolio. Therefore, we found it necessary to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Developing a better understanding of this relationship will allow us to better quantify the risk tolerance, thus allowing us to create a greater spread of risk tolerances and portfolios. 
- 
+**Additional questions**
+* Evaluate how to build the universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising a mixed bag of instruments, including stocks, bonds, and ETFs. We did this to ensure not just various companies but asset classes.
+
+* How to best define risk? Specifically, how can we develop a more in-depth analysis for creating the investor profile? As we started to use the model to solve for the optimal portfolio, we observed that the model follows a logarithmic estimation for the optimal portfolio weights. Therefore, we needed to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Developing a better understanding of this relationship will allow us to quantify the risk tolerance, thus allowing us to create a greater spread of risk tolerances and portfolios.
