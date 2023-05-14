@@ -20,6 +20,7 @@ For project 1, our team, "Fab Five Advisors," created a portfolio investment too
 
 This project leverages python 3.7 specifically and assumes that jupyter lab has been installed. In additon, you would need to have the following modules installed:
 * pandas
+* datetime
 * riskfolio
 * yfinance
 * pathlib
@@ -55,11 +56,36 @@ Critical to our completing this project were the following websites. We would re
 * understand how to construct a risk tolerance variable to quantify an investor's appetite for investment risk[https://finmasters.com/risk-profile-test/#gref]
 * source market data on investment assets from yahoo finance, allowing us to create a universe to choose assets quickly [https://github.com/ranaroussi/yfinance]
 
+# Data Collection
+
+When assessing the input data for our risk parity model, we wanted to put an emphasis on risk-diverse assets to include in our "universe".  To do so, our team agreed to include the top 10 individual stocks, ETFs, and bonds ranked by various metrics/sources.
+
+```assets = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU", "AAPL", "MSFT", "NVDA", "AMZN", "BRK-B",
+         "GOOG", "META", "UNH", "XOM", "AGG", "BND", "LQD", "VCIT", "BNDX", "TMF", "TLT", "ICVT", "LKOR", "FBND"]
+         ```
+* Stocks (highest volatility): Top 10 by index weight
+* ETFs (medium volatility): Top 10 industry sectors
+* Bonds (lowest volatility):  Top 10 bonds to by per money.usnews.com
+
+The diversity in the level of risk of our assets allowed for a larger spread of weight allocation during the optimization stage of the risk model.
+
+# ETL and Cleaning
+
+Yahoo finance formatted their data to provide a relatively painless ETL process.  Using the following lines of code we were able to download the raw historical data over our desired period of time, extract the specific values required for our analysis, and sort the data by asset instead of by performance measure (opening price, closing price, etc...)
+
+```og_data = yf.download(assets, start = start, end = end)
+data = og_data.loc[:,('Adj Close', slice(None))]
+data.columns = assets
+
+Y = data[assets].pct_change().dropna()
+```
+![Y_data](/images/Y_data.png)
+
 # Results
 To illustrate the results of our model, we ran scenarios to understand the extremes of the model. Specifically, if we are to maximize returns based on the client's risk aversion, how do the results in our portfolio change when the client's risk tolerance is changed?
 
 ## Risk Avoidant Client
-Based on our questionnaire, the risk-avoidant client would have entered all '1' for the answers to the questions. As a result, the model returned a portfolio with low returns and low risk.
+Based on our questionnaire, the risk-avoidant client would have entered all '1' for the answers to the questions. As a result, the model returned a portfolio that put an emphasis on bonds and sector ETFs, which typically result in low returns and low risk.
 
 ## Figure 1
 
@@ -70,7 +96,7 @@ Based on our questionnaire, the risk-avoidant client would have entered all '1' 
 ![Risk avoidant optimal portfolio efficient frontier](/images/risk_avoidant_portfolio_efficient_frontier.png)
 
 ## Risky Client
-Based on our questionnaire, the risky client would have entered all '4' for answers. As a result, the model returned a portfolio that had high returns and high risk. 
+Based on our questionnaire, the risky client would have entered all '4' for answers. As a result, the model returned a portfolio that put an emphasis on singular stocks, which result in high returns but also and high risk. 
 
 ## Figure 3
 ![Risky optimal porfolio](/images/risky_portfolio.png)
