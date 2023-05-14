@@ -60,8 +60,8 @@ Critical to our completing this project were the following websites. We would re
 
 When assessing the input data for our risk parity model, we wanted to put an emphasis on risk-diverse assets to include in our "universe".  To do so, our team agreed to include the top 10 individual stocks, ETFs, and bonds ranked by various metrics/sources.
 
-```assets = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU", "AAPL", "MSFT", "NVDA", "AMZN", "BRK-B",
-         "GOOG", "META", "UNH", "XOM", "AGG", "BND", "LQD", "VCIT", "BNDX", "TMF", "TLT", "ICVT", "LKOR", "FBND"]
+```python
+assets = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU", "AAPL", "MSFT", "NVDA", "AMZN", "BRK-B", "GOOG", "META", "UNH", "XOM", "AGG", "BND", "LQD", "VCIT", "BNDX", "TMF", "TLT", "ICVT", "LKOR", "FBND"]
 ```
 * Stocks (highest volatility): Top 10 by index weight
 * ETFs (medium volatility): Top 10 industry sectors
@@ -73,7 +73,8 @@ The diversity in the level of risk of our assets allowed for a larger spread of 
 
 Yahoo finance formatted their data to provide a relatively painless ETL process.  Using the following lines of code we were able to download the raw historical data over our desired period of time, extract the specific values required for our analysis, and sort the data by asset instead of by performance measure (opening price, closing price, etc...)
 
-```og_data = yf.download(assets, start = start, end = end)
+```python
+og_data = yf.download(assets, start = start, end = end)
 data = og_data.loc[:,('Adj Close', slice(None))]
 data.columns = assets
 
