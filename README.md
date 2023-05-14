@@ -108,7 +108,7 @@ Based on our questionnaire, the risky client would have entered all '4' for answ
 ![Risky optimal portfolio efficient frontier](/images/risky_portfolio_efficient_frontier.png)
 
 # MonteCarlo Forecast:
-Using the weighted assets determined by our risk model, our team forecasted the optimized portfolios over the time horizon inputted by the user (in this case, 10 years).  The results of our forcast for the lowest and highest risk tolerances are below:
+Using the weighted assets determined by our risk model, our team forecasted the optimized portfolios over the time horizon inputted by the user (in this case, 10 years).  The results of our forecast for the lowest and highest risk tolerances are below:
 
 ## Risk Avoidant Client
 The 10 year Monte Carlo forecast predicted, within a 95% confidence interval, that the expected returns will be between 0.78 and 1.41% for the least risk tolerant client.
