@@ -3,6 +3,7 @@
 **Columbia University FinTech Bootcamp - Project 1** 
 --
 
+
 # Collaborators
 * Sean Senhouse 
 * Thomas Magee 
@@ -85,3 +86,22 @@ One of the exciting outcomes of this project is that there is a long list of opt
 * Evaluate how to build the universe of investments. For simplicity and to meet our project timeline, we created a static universe comprising a mixed bag of instruments, including stocks, bonds, and ETFs. We did this to ensure not just various companies but asset classes.
 
 * How to best define risk? Specifically, how can we develop a more in-depth analysis for creating the investor profile? As we started to use the model to solve for the optimal portfolio, we observed that the model follows a logarithmic estimation for the optimal portfolio weights. Therefore, we needed to scale our risk aversion factor to see the extremes of the portfolio recommendations based on our universe. Developing a better understanding of this relationship will allow us to quantify the risk tolerance, thus allowing us to create a greater spread of risk tolerances and portfolios.
+=======
+# Source 
+
+## Client Profile Module
+
+This module is used to:
+
+* 1. Quantify the users risk tolerance by asking the users 5 questions to which they are only allowed to answer with integers 1-4 (otherwise the verifier function forces them to retry). Each answer is then aggregated and the mean is found to give the client's tolerance an numeric value for their risk tolerance. This variable is passed on to the MCForecastTools.py and the Riskfolio Library for the next process.
+
+* 2. Collect the users input on how long their desired investment time frame is. This variable is used for the Monte Carlo Simulation.
+
+## Technologies
+
+This project leverages python 3.7 with the following packages:
+
+## Usage
+
+To use the clientprofile module, simply run all code blocks by answering the questions.
+
