@@ -62,7 +62,7 @@ When assessing the input data for our risk parity model, we wanted to put an emp
 
 ```assets = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLB", "XLRE", "XLK", "XLU", "AAPL", "MSFT", "NVDA", "AMZN", "BRK-B",
          "GOOG", "META", "UNH", "XOM", "AGG", "BND", "LQD", "VCIT", "BNDX", "TMF", "TLT", "ICVT", "LKOR", "FBND"]
-         ```
+```
 * Stocks (highest volatility): Top 10 by index weight
 * ETFs (medium volatility): Top 10 industry sectors
 * Bonds (lowest volatility):  Top 10 bonds to by per money.usnews.com
